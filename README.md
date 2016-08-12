@@ -1,30 +1,91 @@
-# Aplicativo com imagens mais recentes do [Flickr](https://www.flickr.com)#
+# Android Challenge
 
-Criar um aplicativo para consultar a [API do Flickr](https://www.flickr.com/services/api/) e trazer as imagens mais recentes. Basear-se no mockup fornecido:
+Criar um aplicativo de filmes que consulte a API do TheMovieDatabase.
 
-![mockups.jpg](https://raw.githubusercontent.com/Helabs/android-challenge/master/references/mockups.jpg)
+## Regras:
+- Escolher algumas funcionalidades e implementar seguindo os critérios de [avaliação](#criterios_avaliacao)
+- Nenhuma das funcionalidades dos desafios abaixo exigem autenticação do usuário. Podem ser acessados apenas usando alguma(s) chave(s) de aplicação dependendo da API.
 
-### **Observação** ###
+## Navegação de filmes usando a [TheMovieDatabase API](https://www.themoviedb.org/documentation/api)
 
-A foto do mockup é meramente ilustrativa.
+### <a name="filmes_cartaz" />1) Listagem de [filmes que estão em cartaz](http://docs.themoviedb.apiary.io/#reference/movies/now_playing)
+- Use o parâmetro `language` com o valor pt (não há suporte para pt_BR) ou en.
+- Campos sugeridos: Title (caso use a lingua `pt`), name, release date e vote average.
+- Mostre uma imagem, usando os campos `backdrop_path` ou `poster_path`
+    - Url para Imagens podem ser montadas de acordo com a [documentação](http://docs.themoviedb.apiary.io/#introduction/configuration)
+- A exibição pode ser em formato de lista ou grade
+    - No caso de grade, exiba apenas o atributo `Title`.
 
-### **Features básicas** ###
+### 2) Listagem de [filmes populares](http://docs.themoviedb.apiary.io/#reference/movies/moviepopular)
+- Mesmas funcionalidades de [__filmes em cartaz__](#filmes_cartaz)
 
-* Lista de fotos recentes. [Info](https://www.flickr.com/services/api/flickr.photos.getRecent.html)
-* Paginação na tela de listas.
-* Tela de detalhe de uma foto. [Info](https://www.flickr.com/services/api/flickr.photos.getInfo.html)
-* A tela de detalhe deve conter o titulo e descrição da foto, o nome do autor e numero de visualizações.
+### 3) Listagem de [filmes mais bem avaliados](http://docs.themoviedb.apiary.io/#reference/movies/movietoprated)
+- Mesmas funcionalidades de [__filmes em cartaz__](#filmes_cartaz)
 
-### **Pontos extras** ###
+### 4) [Detalhe do filme](http://docs.themoviedb.apiary.io/#reference/movies/movieid)
 
-* Desenvolver no Android Studio
-* Usar AndroidAnnotations
-* Sistema de build e gestão de dependências no projeto. Ex: [Gradle]
-* Mapeamento JSON -> Objeto. 
-* Framework para comunicação com API.
-* Lazy Load de Imagens
-* Cache de imagens e da API. 
-* Alguns comentários na tela de detalhes da foto (apenas listar, não precisa a parte de adicionar)
+### 5) [Trailers de filme](http://docs.themoviedb.apiary.io/#reference/movies/movieidvideos)
+- Youtube
+
+### 6) Busca de filmes
+
+*****
+
+## Extras gerais:
+
+### Desenvolver no Android Studio.
+
+### Uso de algum framework ou biblioteca para organização de arquitetura e/ou redução de código "boilerplate":
+- Dagger2 ou Dagger
+- RxAndroid/RxJava
+- ButterKnife
+- Dart
+- Roboguice 3
+
+### Gestão de dependências no projeto:
+- Gradle
+- Maven
+
+### Mapeamento JSON ou XML -> POJO:
+- GSON
+- Jackson Mapper
+- Moshi
+
+### Framework para comunicação com API's externas:
+- Volley
+- Ion
+- Wasp
+- Retrofit
+
+### Carregamento de imagens usando padrão de "lazyload":
+- Picasso
+- Fresco
+- Glide
+- Ion
+- Volley
+
+As bibliotecas citadas são apenas sugestões, sinta-se a vontade para usar outras.
+
+*****
+
+## <a name="criterios_avaliacao"/>Alguns pontos que podem ser avaliados
+
+- Qualidade é melhor que quantidade.
+- Evite fazer requisições desnecessárias. Exemplos de tratamentos:
+    - Cache de imagens.
+    - Tente manter o estado durante rotações (caso seja permitido).
+- Uso de níveis de SDK compatíveis com o mercado.
+- Mantenha uma estrutura consistente de navegação, seja por abas ou menu deslizante, conforme o caso.
+- Preocupação com compatibilidade e bom uso de biblioteca de suporte: Support Library v4, Appcompat v7, Design Library.
+- Uso de componentes novos e/ou do Material Design: Toolbar, RecyclerView, AppBar, CoordinatorLayout, SnackBar, FloatActionButton e etc...
+- Preocupação com organização de código/padronização.
+- Uso de design patterns.
+- Não é obrigatório tratamento para mudança de orientação, caso permita, será avaliado.
+- Testes unitários ou instrumentados serão considerados extras.
+
+*****
 
 ### **ATENÇÃO** ###
+
 Não faça PUSH diretamente para ESTE repositório!!!
+
