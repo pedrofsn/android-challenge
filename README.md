@@ -71,6 +71,7 @@ As bibliotecas citadas são apenas sugestões, sinta-se a vontade para usar outr
 ## <a name="criterios_avaliacao"/>Alguns pontos que podem ser avaliados
 
 - Qualidade é melhor que quantidade.
+- Usar Kotlin em vez de Java é um grande diferencial.
 - Evite fazer requisições desnecessárias. Exemplos de tratamentos:
     - Cache de imagens.
     - Tente manter o estado durante rotações (caso seja permitido).
