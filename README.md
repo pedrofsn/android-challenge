@@ -8,23 +8,23 @@ Criar um aplicativo de filmes que consulte a API do TheMovieDatabase.
 
 ## Navegação de filmes usando a [TheMovieDatabase API](https://www.themoviedb.org/documentation/api)
 
-### <a name="filmes_cartaz" />1) Listagem de [filmes que estão em cartaz](http://docs.themoviedb.apiary.io/#reference/movies/now_playing)
+### <a name="filmes_cartaz" />1) Listagem de [filmes que estão em cartaz](https://developers.themoviedb.org/3/movies/get-now-playing)
 - Use o parâmetro `language` com o valor pt (não há suporte para pt_BR) ou en.
 - Campos sugeridos: Title (caso use a lingua `pt`), name, release date e vote average.
 - Mostre uma imagem, usando os campos `backdrop_path` ou `poster_path`
-    - Url para Imagens podem ser montadas de acordo com a [documentação](http://docs.themoviedb.apiary.io/#introduction/configuration)
+    - Url para Imagens podem ser montadas de acordo com a [documentação](https://developers.themoviedb.org/3/configuration)
 - A exibição pode ser em formato de lista ou grade
     - No caso de grade, exiba apenas o atributo `Title`.
 
-### 2) Listagem de [filmes populares](http://docs.themoviedb.apiary.io/#reference/movies/moviepopular)
+### 2) Listagem de [filmes populares](https://developers.themoviedb.org/3/movies/get-popular-movies)
 - Mesmas funcionalidades de [__filmes em cartaz__](#filmes_cartaz)
 
-### 3) Listagem de [filmes mais bem avaliados](http://docs.themoviedb.apiary.io/#reference/movies/movietoprated)
+### 3) Listagem de [filmes mais bem avaliados](https://developers.themoviedb.org/3/movies/get-top-rated-movies)
 - Mesmas funcionalidades de [__filmes em cartaz__](#filmes_cartaz)
 
-### 4) [Detalhe do filme](http://docs.themoviedb.apiary.io/#reference/movies/movieid)
+### 4) [Detalhe do filme](https://developers.themoviedb.org/3/movies/get-movie-details)
 
-### 5) [Trailers de filme](http://docs.themoviedb.apiary.io/#reference/movies/movieidvideos)
+### 5) [Trailers de filme](https://developers.themoviedb.org/3/movies/get-movie-videos)
 - Youtube
 
 ### 6) Busca de filmes
