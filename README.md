@@ -31,16 +31,16 @@ Criar um aplicativo de filmes que consulte a API do TheMovieDatabase.
 
 *****
 
-## Extras gerais:
+## Extras:
 
 ### Desenvolver no Android Studio.
 
 ### Uso de algum framework ou biblioteca para organização de arquitetura e/ou redução de código "boilerplate":
 - Dagger2 ou Dagger
+- Databind
 - RxAndroid/RxJava
 - ButterKnife
 - Dart
-- Roboguice 3
 
 ### Gestão de dependências no projeto:
 - Gradle
@@ -64,11 +64,15 @@ Criar um aplicativo de filmes que consulte a API do TheMovieDatabase.
 - Ion
 - Volley
 
+### Uso de alguma arquitetura com separação de responsabilidades:
+- MVP
+- MVVM
+
 As bibliotecas citadas são apenas sugestões, sinta-se a vontade para usar outras.
 
 *****
 
-## <a name="criterios_avaliacao"/>Alguns pontos que podem ser avaliados
+## <a name="criterios_avaliacao"/>Alguns pontos que serão ser avaliados
 
 - Qualidade é melhor que quantidade.
 - Usar Kotlin em vez de Java é um grande diferencial.
